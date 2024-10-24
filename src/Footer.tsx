@@ -15,6 +15,10 @@ const footerLinks = [
     label: 'About',
     url: '/about',
   },
+  {
+    label: 'Services',
+    url: '/services',
+  },
 ];
 
 const Footer = () => {
@@ -27,7 +31,7 @@ const Footer = () => {
               <div className="min-w-0 gap-x-4 ">
                 <div className="min-w-0">
                   <Link
-                    className="text-sm text-white font-semibold leading-6 hover:text-black hover:bg-rock-100 rounded-lg px-1 py-1 underline underline-offset-2"
+                    className="text-sm text-white font-semibold leading-6 hover:text-black hover:bg-rock-100 transition duration-500 ease-in-out rounded-lg px-1 py-1 underline underline-offset-2"
                     to={link.url}
                   >
                     {link.label}
@@ -38,7 +42,7 @@ const Footer = () => {
           ))}
         </ul>
         <p className="text-white text-sm py-4 font-semibold">
-          Registered Dietician based in Crystal Lake and Hoffman Estates.
+          Registered Dietitian based in Crystal Lake and Hoffman Estates.
         </p>
       </div>
       {/* <div className="flex-auto inline-flex pt-3 justify-end">

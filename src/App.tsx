@@ -6,6 +6,7 @@ import Home from './routes/Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Error404 from './Error404';
 import About from './routes/About';
+import Services from './routes/Services';
 
 // function Login() {
 //   // defining the initial state for the form
@@ -31,16 +32,21 @@ const router = createBrowserRouter([
     element: <About />,
     errorElement: <Error404 />,
   },
+  {
+    path: 'services',
+    element: <Services />,
+    errorElement: <Error404 />,
+  },
+  // {
+  //   path: 'insurance',
+  //   element: <Insurance />,
+  //   errorElement: <Error404 />,
+  // },
 ]);
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        
-        
-      </header> */}
-
       <RouterProvider router={router} />
     </div>
   );

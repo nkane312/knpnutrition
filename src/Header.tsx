@@ -7,14 +7,16 @@ import { Link } from 'react-router-dom';
 
 const navigation = [
   { name: 'Contact', href: '/contact' },
-  { name: 'About', href: '#' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  // { name: 'Insurance', href: '/insurance' },
 ];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-deep inset-x-0 top-0 z-50 sticky">
+    <header className="bg-deep transition ease-in-out duration-700 hover:bg-deep-600  inset-x-0 top-0 z-50 sticky">
       <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
@@ -25,7 +27,7 @@ const Header = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="#ffffff"
-              className="size-6 h-8 w-auto"
+              className="size-6 h-8 w-auto hover:stroke-2 transition duration-400 ease-in-out rounded-lg"
             >
               <path
                 strokeLinecap="round"
@@ -43,7 +45,10 @@ const Header = () => {
           >
             <span className="sr-only">Open main menu</span>
 
-            <Bars3Icon aria-hidden="true" className="h-6 w-6 text-white" />
+            <Bars3Icon
+              aria-hidden="true"
+              className="h-7 w-7 stroke-1.5 text-white hover:stroke-2 rounded-lg duration-500 ease-in-out"
+            />
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
@@ -51,7 +56,7 @@ const Header = () => {
             <Link
               key={item.name}
               to={item.href}
-              className="text-sm font-semibold leading-6 text-white"
+              className="text-sm font-semibold leading-6 text-white hover:bg-rock-100 hover:text-gray-800 transition duration-500 ease-in-out rounded-lg px-1 py-1"
             >
               {item.name}
             </Link>
@@ -65,9 +70,9 @@ const Header = () => {
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-rock-500 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link to="#" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">KNP Nutrition</span>
               <img
                 alt=""
@@ -78,10 +83,10 @@ const Header = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 text-white"
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+              <XMarkIcon aria-hidden="true" className="hover:stroke-2 h-6 w-6" />
             </button>
           </div>
           <div className="mt-6 flow-root">
@@ -91,20 +96,20 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-900 hover:bg-rock-100 transition duration-500 ease-in-out"
                   >
                     {item.name}
                   </Link>
                 ))}
               </div>
-              <div className="py-6">
+              {/* <div className="py-6">
                 <Link
                   to="#"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Log in
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </DialogPanel>

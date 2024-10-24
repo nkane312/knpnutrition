@@ -3,6 +3,33 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: 0 },
+          '50%': { opacity: 0.5 },
+          '100%': { opacity: 1 },
+        },
+        'fade-in-left': {
+          '0%': { opacity: 0, right: '500px' },
+          // '50%': { opacity: 0.5 },
+          '100%': { opacity: 1, right: '0px' },
+        },
+        'fade-in-right': {
+          '0%': { opacity: 0, left: '500px' },
+          // '50%': { opacity: 0.5 },
+          '100%': { opacity: 1, left: '0px' },
+        },
+      },
+      animation: {
+        fade: 'fade-in 1s linear 0s 1 normal',
+        'fade-right': 'fade-in-right 1s ease-in-out 0s 1 normal',
+        'fade-left': 'fade-in-left 1s ease-in-out 0s 1 normal',
+      },
+      backgroundImage: {
+        salad: "url('/img/meal-2834549_1920.jpg')",
+        table: "url('/img/spaghetti-1932466_1920.jpg')",
+        eggs: "url('/img/eggs-944495_1920.jpg')",
+      },
       colors: {
         deep: {
           // text-black
