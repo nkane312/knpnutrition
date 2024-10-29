@@ -9,16 +9,16 @@ const About = () => {
   return (
     <div className="h-screen flex flex-col justify-between">
       <Header />
-      <main className="bg-salad bg-fixed grid grid-cols-6 gap-4 py-6 md:py-16 px-6 lg:px-8 leading-10">
-        <div className="p-36 bg-eggs bg-cover col-span-6 md:col-span-1 rounded-xl animate-fade-left">
+      <main className="bg-salad bg-fixed grid grid-cols-12 py-6 md:py-16 px-6 lg:px-8 leading-10 content-center">
+        <div className="p-36 bg-eggs bg-cover col-span-12 sm:col-span-2 rounded-xl animate-fade-left z-20">
           <span className="sr-only">Katie Primak Headshot</span>
         </div>
-        <div className="p-4 col-span-6 md:col-span-5 mx-auto bg-dry-sand-50 rounded-xl ">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <div className="p-4 col-span-12 sm:col-end-13 sm:col-span-8 bg-dry-sand-50 sm:h-1/2 self-end z-10">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl animate-fade-right ">
             Katie Primak, RD, LDN
           </h1>
         </div>
-        <div className="col-span-6 mx-auto py-4 sm:py-12 lg:py-16 px-8 bg-dry-sand-50 ">
+        <div className="col-span-12 mx-auto py-4 sm:py-12 lg:py-16 px-8 bg-dry-sand-50 ">
           <div className="text-center animate-fade">
             <p className="mt-6 text-lg leading-8 text-gray-900">
               A Registered Dietitian, working in private practice in Crystal Lake and Hoffman
