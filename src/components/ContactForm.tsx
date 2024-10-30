@@ -149,6 +149,42 @@ const ContactForm = () => {
                 </div>
 
                 <div className="sm:col-span-2 justify-around">
+                  <p className="block text-left text-sm font-medium leading-6 text-gray-900">
+                    Services
+                  </p>
+                  <div className="flex items-center ps-4 border rounded bg-wet-sand-100 mb-1 has-[input:checked]:bg-rock-500 cursor-pointer">
+                    <input
+                      id="service-a"
+                      type="checkbox"
+                      value="service-a"
+                      name="services"
+                      className="peer w-4 h-4 border-none text-rock-500 rounded ring-0 ring-opacity-0 focus:ring-opacity-0 focus:ring-0 bg-wet-sand-100 cursor-pointer"
+                    />
+                    <label
+                      htmlFor="service-a"
+                      className="w-full py-4 me-2 text-sm font-medium text-gray-900 peer-checked:text-white cursor-pointer"
+                    >
+                      Service A
+                    </label>
+                  </div>
+                  <div className="flex items-center ps-4 border rounded bg-wet-sand-100 mb-1 has-[input:checked]:bg-rock-500 cursor-pointer">
+                    <input
+                      id="service-b"
+                      type="checkbox"
+                      value="service-b"
+                      name="services"
+                      className="peer w-4 h-4 border-none text-rock-500 rounded ring-0 ring-opacity-0 focus:ring-opacity-0 focus:ring-0 bg-wet-sand-100 cursor-pointer"
+                    />
+                    <label
+                      htmlFor="service-b"
+                      className="w-full py-4 me-2 text-sm font-medium text-gray-900 cursor-pointer peer-checked:text-white"
+                    >
+                      Service B
+                    </label>
+                  </div>
+                </div>
+
+                <div className="sm:col-span-2 justify-around">
                   <label
                     htmlFor="mesage"
                     className="block text-left text-sm font-medium leading-6 text-gray-900"
