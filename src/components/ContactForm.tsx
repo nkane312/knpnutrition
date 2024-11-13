@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 interface FormData {
@@ -52,13 +52,6 @@ const ContactForm = () => {
     e.currentTarget.reset();
   };
 
-  // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   setFormStatus('Sending...');
-
-  //   setFormStatus('Sent');
-  // };
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>,
   ) => {
@@ -66,7 +59,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-dry-sand-100 relative isolate px-6 p-4 mb-12 lg:px-8 flex-auto w-screen md:w-3/5 lg:w-2/5 animate-fade-right">
+    <div className="bg-dry-sand-100 relative isolate px-6 py-4 mb-12 lg:px-8 flex-auto w-screen md:w-3/5 lg:w-2/5 animate-fade-right">
       {formStatus === 'Sent' ? (
         <div className="space-y-12">
           <div className="border-b border-gray-900/10 pt-3 pb-12">
@@ -128,7 +121,7 @@ const ContactForm = () => {
                   </div>
                 </div>
 
-                <div className="sm:col-span-2 justify-around">
+                <div className="justify-around">
                   <label
                     htmlFor="email"
                     className="block text-left text-sm font-medium leading-6 text-gray-900"
@@ -141,6 +134,27 @@ const ContactForm = () => {
                       name="email"
                       type="email"
                       autoComplete="email"
+                      // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
+                      required
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+
+                <div className="justify-around">
+                  <label
+                    htmlFor="phone"
+                    className="block text-left text-sm font-medium leading-6 text-gray-900"
+                  >
+                    Phone
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      pattern="[1]?-?\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}"
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
                       required
                       onChange={handleChange}
@@ -207,7 +221,7 @@ const ContactForm = () => {
               <div className="mt-6 flex items-center justify-center gap-x-6">
                 <button
                   type="submit"
-                  className="rounded-md bg-shallow px-10 py-3 text-sm font-semibold text-black shadow-sm ease-in-out transition duration-500 hover:bg-shallow-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rock"
+                  className="rounded-md bg-shallow-600 px-3.5 py-2.5 text-base font-bold text-white shadow-sm hover:bg-shallow-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rock ease-in-out duration-500 active:scale-95 transition-transform transform"
                   disabled={formStatus === 'Sending...' ? true : false}
                 >
                   {formStatus === 'Sending...' ? (

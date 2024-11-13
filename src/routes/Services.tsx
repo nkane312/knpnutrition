@@ -3,8 +3,10 @@
 // import { Link } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
-import ButtonElement from '../components/ButtonElement';
+// import ButtonElement from '../components/ButtonElement';
 import ServiceCard from '../components/ServiceCard';
+import Carousel from '../components/Carousel';
+import TestimonialData from '../data/testimonials.json';
 
 const Services = () => {
   return (
@@ -34,6 +36,10 @@ const Services = () => {
           description="This is a description"
           img="https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png"
           alt="Image alt text"
+        />
+
+        <Carousel
+          {...{ TestimonialArray: TestimonialData, autoSlide: true, autoSlideInterval: 10000 }}
         />
 
         {/* <div className="bg-dry-sand-50 mx-auto max-w-4xl py-8 sm:py-16 lg:py-16 px-6 hover:py-28 lg:px-8 rounded-2xl hover:rounded-none duration-700 ease-in-out">
