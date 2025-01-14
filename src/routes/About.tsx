@@ -9,7 +9,10 @@ const About = () => {
   return (
     <div className="h-screen flex flex-col justify-between">
       <Header />
-      <main className="bg-salad bg-fixed grid grid-cols-12 py-6 md:py-16 px-6 lg:px-8 leading-10 content-center">
+      <main
+        id="main"
+        className="bg-salad bg-fixed grid grid-cols-12 py-6 md:py-16 px-6 lg:px-8 leading-10 content-center"
+      >
         <div className="p-36 bg-eggs bg-cover col-span-12 sm:col-span-2 rounded-xl animate-fade-left z-20">
           <span className="sr-only">Katie Primak Headshot</span>
         </div>

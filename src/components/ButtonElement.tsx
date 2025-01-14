@@ -9,7 +9,7 @@ const ButtonElement = ({ href, text }: ButtonProps) => {
   return (
     <Link
       to={href}
-      className="rounded-md bg-shallow-600 px-3.5 py-2.5 text-base font-bold text-white shadow-sm hover:bg-shallow-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rock ease-in-out duration-500 active:scale-95 transition-transform transform"
+      className="rounded-md bg-shallow-800 px-3.5 py-2.5 text-base font-bold text-white shadow-sm hover:bg-shallow-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rock ease-in-out duration-500 active:scale-95 transition-transform transform"
     >
       {text}
     </Link>

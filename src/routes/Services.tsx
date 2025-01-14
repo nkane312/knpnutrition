@@ -12,37 +12,43 @@ const Services = () => {
   return (
     <div className="h-screen flex flex-col justify-between">
       <Header />
-      <main className="bg-table bg-auto bg-fixed bg-center grid grid-cols-12 items-center justify-center gap-5 p-5">
-        <ServiceCard
-          title="Service A"
-          description="This is a description"
-          img="https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png"
-          alt="Image alt text"
-        />
-        <ServiceCard
-          title="Service B"
-          description="This is a description"
-          img="https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png"
-          alt="Image alt text"
-        />
-        <ServiceCard
-          title="Service C"
-          description="This is a description"
-          img="https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png"
-          alt="Image alt text"
-        />
-        <ServiceCard
-          title="Service D"
-          description="This is a description"
-          img="https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png"
-          alt="Image alt text"
-        />
+      <main id="main" className="bg-table items-center justify-center gap-5 p-5">
+        <div className="p-4 w-full lg:w-1/2 justify-self-center bg-dry-sand-50">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl animate-fade-right ">
+            Provided Services
+          </h1>
+        </div>
+        <div className="bg-auto bg-fixed bg-center grid grid-cols-12 items-center justify-center gap-5 p-5">
+          <ServiceCard
+            title="Service A"
+            description="This is a description"
+            img="https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png"
+            alt="Image alt text"
+          />
+          <ServiceCard
+            title="Service B"
+            description="This is a description"
+            img="https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png"
+            alt="Image alt text"
+          />
+          <ServiceCard
+            title="Service C"
+            description="This is a description"
+            img="https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png"
+            alt="Image alt text"
+          />
+          <ServiceCard
+            title="Service D"
+            description="This is a description"
+            img="https://tailwind-generator.b-cdn.net/images/card-generator/tailwind-card-generator-card-preview.png"
+            alt="Image alt text"
+          />
 
-        <Carousel
-          {...{ TestimonialArray: TestimonialData, autoSlide: true, autoSlideInterval: 10000 }}
-        />
+          <Carousel
+            {...{ TestimonialArray: TestimonialData, autoSlide: false, autoSlideInterval: 10000 }}
+          />
 
-        {/* <div className="bg-dry-sand-50 mx-auto max-w-4xl py-8 sm:py-16 lg:py-16 px-6 hover:py-28 lg:px-8 rounded-2xl hover:rounded-none duration-700 ease-in-out">
+          {/* <div className="bg-dry-sand-50 mx-auto max-w-4xl py-8 sm:py-16 lg:py-16 px-6 hover:py-28 lg:px-8 rounded-2xl hover:rounded-none duration-700 ease-in-out">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               KNP Nutrition
@@ -68,6 +74,7 @@ const Services = () => {
             </div>
           </div>
         </div> */}
+        </div>
       </main>
       <Footer />
     </div>

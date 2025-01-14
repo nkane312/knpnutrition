@@ -63,7 +63,7 @@ const ContactForm = () => {
       {formStatus === 'Sent' ? (
         <div className="space-y-12">
           <div className="border-b border-gray-900/10 pt-3 pb-12">
-            <h2 className="mt-7 text-xl font-semibold leading-7 text-gray-900">{stateMessage}</h2>
+            <h2 className="mt-7 text-xl font-semibold leading-7 text-gray-950">{stateMessage}</h2>
             {/* <p className="mt-1 text-sm leading-6 text-gray-600">
               We will be in touch with you soon.
             </p> */}
@@ -73,7 +73,7 @@ const ContactForm = () => {
         <form onSubmit={sendEmail}>
           <div className="space-y-12">
             <div className="border-b border-gray-900/10 pt-3 pb-12">
-              <h2 className="mt-7 text-xl font-bold text-gray-900 text-center">
+              <h2 className="mt-7 text-xl font-bold text-gray-950 text-center">
                 Please fill out below
               </h2>
               {/* <p className="mt-1 text-sm leading-6 text-gray-600">
@@ -84,7 +84,7 @@ const ContactForm = () => {
                 <div className="justify-around">
                   <label
                     htmlFor="first-name"
-                    className="block text-left text-sm font-medium leading-6 text-gray-900"
+                    className="block text-left text-sm font-medium leading-6 text-gray-950"
                   >
                     First name
                   </label>
@@ -94,7 +94,7 @@ const ContactForm = () => {
                       name="first-name"
                       type="text"
                       autoComplete="given-name"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
                       required
                       onChange={handleChange}
                     />
@@ -104,7 +104,7 @@ const ContactForm = () => {
                 <div className="justify-around">
                   <label
                     htmlFor="last-name"
-                    className="block text-left text-sm font-medium leading-6 text-gray-900"
+                    className="block text-left text-sm font-medium leading-6 text-gray-950"
                   >
                     Last name
                   </label>
@@ -114,7 +114,7 @@ const ContactForm = () => {
                       name="last-name"
                       type="text"
                       autoComplete="family-name"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
                       required
                       onChange={handleChange}
                     />
@@ -124,7 +124,7 @@ const ContactForm = () => {
                 <div className="justify-around">
                   <label
                     htmlFor="email"
-                    className="block text-left text-sm font-medium leading-6 text-gray-900"
+                    className="block text-left text-sm font-medium leading-6 text-gray-950"
                   >
                     Email address
                   </label>
@@ -135,7 +135,7 @@ const ContactForm = () => {
                       type="email"
                       autoComplete="email"
                       // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-950 shadow-sm ring-1 ring-inset ring-gray-950 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
                       required
                       onChange={handleChange}
                     />
@@ -145,7 +145,7 @@ const ContactForm = () => {
                 <div className="justify-around">
                   <label
                     htmlFor="phone"
-                    className="block text-left text-sm font-medium leading-6 text-gray-900"
+                    className="block text-left text-sm font-medium leading-6 text-gray-950"
                   >
                     Phone
                   </label>
@@ -153,9 +153,10 @@ const ContactForm = () => {
                     <input
                       id="phone"
                       name="phone"
+                      autoComplete="tel"
                       type="tel"
                       pattern="[1]?-?\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-950 shadow-sm ring-1 ring-inset ring-gray-950 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6 bg-white"
                       required
                       onChange={handleChange}
                     />
@@ -163,45 +164,48 @@ const ContactForm = () => {
                 </div>
 
                 <div className="sm:col-span-2 justify-around">
-                  <p className="block text-left text-sm font-medium leading-6 text-gray-900">
-                    Services
-                  </p>
-                  <div className="flex items-center ps-4 border rounded bg-wet-sand-100 mb-1 has-[input:checked]:bg-rock-500 cursor-pointer">
-                    <input
-                      id="service-a"
-                      type="checkbox"
-                      value="service-a"
-                      name="services"
-                      className="peer w-4 h-4 border-none text-rock-500 rounded ring-0 ring-opacity-0 focus:ring-opacity-0 focus:ring-0 bg-wet-sand-100 cursor-pointer"
-                    />
-                    <label
-                      htmlFor="service-a"
-                      className="w-full py-4 me-2 text-sm font-medium text-gray-900 peer-checked:text-white cursor-pointer"
-                    >
-                      Service A
-                    </label>
-                  </div>
-                  <div className="flex items-center ps-4 border rounded bg-wet-sand-100 mb-1 has-[input:checked]:bg-rock-500 cursor-pointer">
-                    <input
-                      id="service-b"
-                      type="checkbox"
-                      value="service-b"
-                      name="services"
-                      className="peer w-4 h-4 border-none text-rock-500 rounded ring-0 ring-opacity-0 focus:ring-opacity-0 focus:ring-0 bg-wet-sand-100 cursor-pointer"
-                    />
-                    <label
-                      htmlFor="service-b"
-                      className="w-full py-4 me-2 text-sm font-medium text-gray-900 cursor-pointer peer-checked:text-white"
-                    >
-                      Service B
-                    </label>
-                  </div>
+                  <fieldset>
+                    <p className="block text-left text-sm font-medium leading-6 text-gray-950">
+                      Services
+                    </p>
+                    <legend className="sr-only">Optional list of services to be selected</legend>
+                    <div className="flex items-center ps-4 border rounded bg-wet-sand-100 mb-1 has-[input:checked]:bg-rock-500 cursor-pointer">
+                      <input
+                        id="service-a"
+                        type="checkbox"
+                        value="service-a"
+                        name="services"
+                        className="peer w-4 h-4 border-none text-rock-500 rounded ring-0 ring-opacity-0 focus:ring-opacity-0 focus:ring-0 bg-wet-sand-100 cursor-pointer"
+                      />
+                      <label
+                        htmlFor="service-a"
+                        className="w-full py-4 me-2 text-sm font-medium text-gray-950 peer-checked:text-white cursor-pointer"
+                      >
+                        Service A
+                      </label>
+                    </div>
+                    <div className="flex items-center ps-4 border rounded bg-wet-sand-100 mb-1 has-[input:checked]:bg-rock-500 cursor-pointer">
+                      <input
+                        id="service-b"
+                        type="checkbox"
+                        value="service-b"
+                        name="services"
+                        className="peer w-4 h-4 border-none text-rock-500 rounded ring-0 ring-opacity-0 focus:ring-opacity-0 focus:ring-0 bg-wet-sand-100 cursor-pointer"
+                      />
+                      <label
+                        htmlFor="service-b"
+                        className="w-full py-4 me-2 text-sm font-medium text-gray-950 cursor-pointer peer-checked:text-white"
+                      >
+                        Service B
+                      </label>
+                    </div>
+                  </fieldset>
                 </div>
 
                 <div className="sm:col-span-2 justify-around">
                   <label
-                    htmlFor="mesage"
-                    className="block text-left text-sm font-medium leading-6 text-gray-900"
+                    htmlFor="message"
+                    className="block text-left text-sm font-medium leading-6 text-gray-950"
                   >
                     Message
                   </label>
@@ -209,9 +213,9 @@ const ContactForm = () => {
                     <textarea
                       id="message"
                       name="message"
-                      autoComplete="message"
+                      autoComplete="off"
                       placeholder="Reason for inquiring..."
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-950 shadow-sm ring-1 ring-inset ring-gray-950 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6 bg-white"
                       required
                       onChange={handleChange}
                     />
@@ -221,7 +225,7 @@ const ContactForm = () => {
               <div className="mt-6 flex items-center justify-center gap-x-6">
                 <button
                   type="submit"
-                  className="rounded-md bg-shallow-600 px-3.5 py-2.5 text-base font-bold text-white shadow-sm hover:bg-shallow-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rock ease-in-out duration-500 active:scale-95 transition-transform transform"
+                  className="rounded-md bg-shallow-800 px-3.5 py-2.5 text-base font-bold text-white shadow-sm hover:bg-shallow-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rock ease-in-out duration-500 active:scale-95 transition-transform transform"
                   disabled={formStatus === 'Sending...' ? true : false}
                 >
                   {formStatus === 'Sending...' ? (

@@ -9,7 +9,10 @@ const Home = () => {
   return (
     <div className="h-screen flex flex-col justify-between">
       <Header />
-      <main className="h-screen bg-table bg-auto bg-fixed bg-center flex flex-col items-center justify-center">
+      <main
+        id="main"
+        className="h-screen bg-table bg-auto bg-fixed bg-center flex flex-col items-center justify-center"
+      >
         {/* <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -23,15 +26,14 @@ const Home = () => {
           />
         </div> */}
         <div className="bg-dry-sand-50 max-w-4xl py-8 sm:py-16 lg:py-16 px-6 hover:py-28 lg:px-8 rounded-2xl hover:rounded-none duration-700 ease-in-out animate-fade">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-900 font-semibold ring-1 ring-gray-900/10 transition ease-in-out duration-500 hover:ring-gray-900/20 hover:bg-rock-800 hover:text-white">
-              Take a look at the services I offer.{' '}
-              <Link to="/services" className="font-semibold text-deep-700 hover:text-white">
-                <span aria-hidden="true" className="absolute inset-0" />
-                View Now <span aria-hidden="true">&rarr;</span>
+          {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-deep-700 font-semibold ring-1 ring-gray-900/10 transition ease-in-out duration-500 hover:ring-gray-900/20 hover:bg-rock-800 hover:text-white">
+              <Link to="/services" className="font-semibold  hover:text-white">
+                Take a look at the services I offer. View Now
+                <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
-          </div>
+          </div> */}
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               KNP Nutrition
@@ -45,9 +47,10 @@ const Home = () => {
               <ButtonElement href="/contact" text="Get in Contact" />
               <Link
                 to="/about"
-                className="text-sm font-semibold leading-6 text-deep-700 hover:text-black transition ease-in-out duration-500"
+                className="text-sm font-semibold leading-6 text-deep-800 hover:text-white transition ease-in-out duration-500 rounded-full hover:ring-gray-950/20 hover:bg-rock-800 px-3 py-1 ring-2 ring-rock-800"
               >
-                Learn more <span aria-hidden="true">→</span>
+                Learn more
+                <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
           </div>

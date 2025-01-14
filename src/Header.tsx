@@ -16,7 +16,13 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-deep transition ease-in-out duration-700 hover:bg-deep-600  inset-x-0 top-0 z-50 sticky">
+    <header className="bg-deep transition ease-in-out duration-700 hover:bg-deep-600 inset-x-0 top-0 z-50 sticky">
+      <a
+        href="#main"
+        className="text-center bg-black text-white underline text-2xl sr-only focus:not-sr-only"
+      >
+        Skip to main content
+      </a>
       <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
@@ -26,7 +32,7 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke="#ffffff"
+              stroke="#000000"
               className="size-6 h-8 w-auto hover:stroke-2 transition duration-400 ease-in-out rounded-lg"
             >
               <path
@@ -47,7 +53,7 @@ const Header = () => {
 
             <Bars3Icon
               aria-hidden="true"
-              className="h-7 w-7 stroke-1.5 text-white hover:stroke-2 rounded-lg duration-500 ease-in-out"
+              className="h-7 w-7 stroke-1.5 text-black hover:stroke-2 rounded-lg duration-500 ease-in-out"
             />
           </button>
         </div>
@@ -56,7 +62,7 @@ const Header = () => {
             <Link
               key={item.name}
               to={item.href}
-              className="text-sm font-semibold leading-6 text-white hover:bg-rock-100 hover:text-gray-800 transition duration-500 ease-in-out rounded-lg px-1 py-1"
+              className="text-sm font-semibold leading-6 text-black hover:bg-rock-100 hover:text-gray-800 transition duration-500 ease-in-out rounded-lg px-1 py-1"
             >
               {item.name}
             </Link>
